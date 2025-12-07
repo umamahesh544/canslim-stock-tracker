@@ -48,19 +48,29 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                         onClick={() => navigate('/')}
                     />
                     <NavItem
-                        icon={Search}
-                        label="Screener"
-                        active={location.pathname === '/screener'}
-                        onClick={() => navigate('/screener')}
+                        icon={TrendingUp}
+                        label="Today's CANSLIM"
+                        active={location.pathname === '/todays-canslim'}
+                        onClick={() => navigate('/todays-canslim')}
                     />
                     <NavItem
-                        icon={TrendingUp}
+                        icon={BookOpen}
+                        label="Past Week Data"
+                        active={location.pathname === '/past-week-canslim'}
+                        onClick={() => navigate('/past-week-canslim')}
+                    />
+                    <NavItem
+                        icon={Search}
+                        label="Today's Top Gainers"
+                        active={location.pathname === '/top-gainers'}
+                        onClick={() => navigate('/top-gainers')}
+                    />
+                    <NavItem
+                        icon={Bell}
                         label="Watchlist"
                         active={location.pathname === '/watchlist'}
                         onClick={() => navigate('/watchlist')}
                     />
-                    <NavItem icon={BookOpen} label="CANSLIM Guide" onClick={() => alert("Guide coming soon!")} />
-                    <NavItem icon={Settings} label="Settings" onClick={() => alert("Settings coming soon!")} />
                 </nav>
 
                 <div className="p-4 border-t border-border">
