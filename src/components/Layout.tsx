@@ -25,8 +25,6 @@ const NavItem = ({ icon: Icon, label, active, onClick }: NavItemProps) => (
     </button>
 );
 
-
-
 export const Layout = ({ children }: { children: React.ReactNode }) => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -50,10 +48,16 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                         onClick={() => navigate('/')}
                     />
                     <NavItem
-                        icon={TrendingUp}
+                        icon={Search}
                         label="Screener"
                         active={location.pathname === '/screener'}
                         onClick={() => navigate('/screener')}
+                    />
+                    <NavItem
+                        icon={TrendingUp}
+                        label="Watchlist"
+                        active={location.pathname === '/watchlist'}
+                        onClick={() => navigate('/watchlist')}
                     />
                     <NavItem icon={BookOpen} label="CANSLIM Guide" onClick={() => alert("Guide coming soon!")} />
                     <NavItem icon={Settings} label="Settings" onClick={() => alert("Settings coming soon!")} />
