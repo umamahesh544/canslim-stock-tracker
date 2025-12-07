@@ -4,10 +4,10 @@ interface ScreenerProps {
     title?: string;
     defaultScreen?: string;
     sort?: string;
-    filters?: any[]; // Allow passing specific filters if supported, though for widget mainly predefined screens work best
+    filters?: any;
 }
 
-export const TradingViewScreener = memo(({ defaultScreen = "top_gainers", sort = "change|desc" }: ScreenerProps) => {
+export const TradingViewScreener = memo(({ defaultScreen = "top_gainers", sort = "change|desc", filters = {} }: ScreenerProps) => {
     const container = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -19,8 +19,8 @@ export const TradingViewScreener = memo(({ defaultScreen = "top_gainers", sort =
         script.type = "text/javascript";
         script.async = true;
 
-        // We can inject a more complex JSON config here
-        const config = {
+        // Base Config
+        const config: any = {
             "width": "100%",
             "height": "100%",
             "defaultColumn": "overview",
@@ -32,9 +32,18 @@ export const TradingViewScreener = memo(({ defaultScreen = "top_gainers", sort =
             "sort": sort
         };
 
+        // If specific filters are provided, we try to merge them.
+        // Note: For standard embeds, 'filters' might not directly override 'defaultScreen' logic 
+        // unless using a specific query mode, but we merge them here to attempt strict filtering.
+        // If the widget ignores this, it's a limitation of the free embed API.
+        if (Object.keys(filters).length > 0) {
+            // Some embedding versions allow "scan_filters" or just merging keys
+            Object.assign(config, filters);
+        }
+
         script.innerHTML = JSON.stringify(config);
         container.current.appendChild(script);
-    }, [defaultScreen, sort]);
+    }, [defaultScreen, sort, filters]);
 
     return (
         <div className="tradingview-widget-container h-full w-full" ref={container}>

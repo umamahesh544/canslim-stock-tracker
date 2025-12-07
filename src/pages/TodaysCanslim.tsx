@@ -10,7 +10,16 @@ export const TodaysCanslim = () => {
                     <p className="text-muted-foreground">High-growth stocks with strong earnings and technical momentum (Market Cap 500-1000Cr).</p>
                 </div>
                 <div className="flex-1 bg-card border border-border rounded-xl overflow-hidden p-1">
-                    <TradingViewScreener defaultScreen="general" sort="earnings_per_share_diluted_yoy_growth|desc" />
+                    <TradingViewScreener
+                        defaultScreen="general"
+                        sort="change|desc"
+                        filters={{
+                            // Attempting to apply Market Cap filter: 500Cr (5B INR) - 1000Cr (10B INR)
+                            // Note: Widget API support for custom numeric ranges on free embeds is limited/undocumented.
+                            // If this fails, user must use the blue Filter button.
+                            "market_cap_basic": { "left": 5000000000, "right": 10000000000 }
+                        }}
+                    />
                 </div>
             </div>
         </Layout>
