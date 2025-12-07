@@ -34,6 +34,7 @@ export const Top20Snapshot = () => {
                                     <th className="px-6 py-4">Change %</th>
                                     <th className="px-6 py-4">Market Cap</th>
                                     <th className="px-6 py-4">P/E Ratio</th>
+                                    <th className="px-6 py-4">Chart Pattern</th>
                                     <th className="px-6 py-4">Growth Rating</th>
                                 </tr>
                             </thead>
@@ -64,6 +65,20 @@ export const Top20Snapshot = () => {
                                             )}>
                                                 {stock.pe}
                                             </span>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            {stock.pattern && stock.pattern !== "None" ? (
+                                                <span className={cn(
+                                                    "px-2 py-1 rounded text-xs font-bold border",
+                                                    stock.pattern.includes("Cup") ? "bg-indigo-500/10 text-indigo-400 border-indigo-500/20" :
+                                                        stock.pattern.includes("Triangle") ? "bg-orange-500/10 text-orange-400 border-orange-500/20" :
+                                                            "bg-muted text-muted-foreground"
+                                                )}>
+                                                    {stock.pattern}
+                                                </span>
+                                            ) : (
+                                                <span className="text-muted-foreground text-xs">-</span>
+                                            )}
                                         </td>
                                         <td className="px-6 py-4">
                                             <span className={cn(

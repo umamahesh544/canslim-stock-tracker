@@ -26,6 +26,7 @@ export const PastWeekCustom = () => {
                                 <tr>
                                     <th className="px-6 py-4">Company Name</th>
                                     <th className="px-6 py-4">Current Price</th>
+                                    <th className="px-6 py-4">Key Pattern</th>
                                     <th className="px-6 py-4">Weekly Trend</th>
                                     <th className="px-6 py-4">Technical Rating</th>
                                     <th className="px-6 py-4">Relative Strength</th>
@@ -41,6 +42,20 @@ export const PastWeekCustom = () => {
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 font-mono">₹{stock.price.toLocaleString()}</td>
+                                        <td className="px-6 py-4">
+                                            {stock.pattern && stock.pattern !== "None" ? (
+                                                <span className={cn(
+                                                    "px-2 py-1 rounded text-xs font-bold border",
+                                                    stock.pattern.includes("Cup") ? "bg-indigo-500/10 text-indigo-400 border-indigo-500/20" :
+                                                        stock.pattern.includes("Triangle") ? "bg-orange-500/10 text-orange-400 border-orange-500/20" :
+                                                            "bg-muted text-muted-foreground"
+                                                )}>
+                                                    {stock.pattern}
+                                                </span>
+                                            ) : (
+                                                <span className="text-muted-foreground text-xs">-</span>
+                                            )}
+                                        </td>
                                         <td className="px-6 py-4">
                                             <div className={cn(
                                                 "flex items-center gap-2 font-bold",
