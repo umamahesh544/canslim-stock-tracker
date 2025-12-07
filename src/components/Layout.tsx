@@ -1,6 +1,7 @@
 import React from 'react';
 import { LayoutDashboard, TrendingUp, BookOpen, Settings, Bell, Search, Menu } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface NavItemProps {
     icon: React.ElementType;
@@ -24,7 +25,12 @@ const NavItem = ({ icon: Icon, label, active, onClick }: NavItemProps) => (
     </button>
 );
 
+
+
 export const Layout = ({ children }: { children: React.ReactNode }) => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
     return (
         <div className="min-h-screen bg-background flex">
             {/* Sidebar */}
@@ -37,10 +43,20 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 </div>
 
                 <nav className="flex-1 p-4 space-y-2">
-                    <NavItem icon={LayoutDashboard} label="Dashboard" active />
-                    <NavItem icon={TrendingUp} label="Watchlist" onClick={() => alert("Watchlist feature coming soon!")} />
-                    <NavItem icon={BookOpen} label="CANSLIM Guide" onClick={() => alert("CANSLIM Guide feature coming soon!")} />
-                    <NavItem icon={Settings} label="Settings" onClick={() => alert("Settings feature coming soon!")} />
+                    <NavItem
+                        icon={LayoutDashboard}
+                        label="Dashboard"
+                        active={location.pathname === '/'}
+                        onClick={() => navigate('/')}
+                    />
+                    <NavItem
+                        icon={TrendingUp}
+                        label="Screener"
+                        active={location.pathname === '/screener'}
+                        onClick={() => navigate('/screener')}
+                    />
+                    <NavItem icon={BookOpen} label="CANSLIM Guide" onClick={() => alert("Guide coming soon!")} />
+                    <NavItem icon={Settings} label="Settings" onClick={() => alert("Settings coming soon!")} />
                 </nav>
 
                 <div className="p-4 border-t border-border">

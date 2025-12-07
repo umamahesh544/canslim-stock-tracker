@@ -1,4 +1,4 @@
-import { StockChart } from '../components/StockChart';
+import { TradingViewWidget } from '../components/TradingViewWidget';
 import { CanslimCard } from '../components/CanslimCard';
 import { Layout } from '../components/Layout';
 
@@ -13,7 +13,9 @@ export const Dashboard = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="lg:col-span-2 space-y-6">
-                        <StockChart />
+                        <div className="h-[500px] border border-border rounded-xl overflow-hidden">
+                            <TradingViewWidget />
+                        </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="bg-card border border-border rounded-xl p-6">
