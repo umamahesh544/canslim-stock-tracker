@@ -14,9 +14,14 @@ export const Top20Snapshot = () => {
                         </h2>
                         <span className="px-2 py-1 bg-green-500/10 text-green-500 text-xs font-bold rounded border border-green-500/20">LIVE SNAPSHOT</span>
                     </div>
-                    <p className="text-muted-foreground mt-2">
-                        High-growth focus: Market Cap ₹500Cr - ₹1000Cr | Sales/EPS Growth Leaders.
-                    </p>
+                    <div className="flex flex-col mt-2">
+                        <p className="text-muted-foreground">
+                            High-growth focus: Market Cap ₹500Cr - ₹1000Cr | Sales/EPS Growth Leaders.
+                        </p>
+                        <p className="text-xs text-muted-foreground/60 mt-1">
+                            Data as of Market Close: <span className="font-mono text-foreground/80">Friday, Dec 5, 2025</span>
+                        </p>
+                    </div>
                 </div>
 
                 <div className="bg-card border border-border rounded-xl overflow-hidden shadow-sm">
