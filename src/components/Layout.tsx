@@ -6,10 +6,12 @@ interface NavItemProps {
     icon: React.ElementType;
     label: string;
     active?: boolean;
+    onClick?: () => void;
 }
 
-const NavItem = ({ icon: Icon, label, active }: NavItemProps) => (
+const NavItem = ({ icon: Icon, label, active, onClick }: NavItemProps) => (
     <button
+        onClick={onClick}
         className={cn(
             "w-full flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg transition-colors",
             active
@@ -36,9 +38,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
                 <nav className="flex-1 p-4 space-y-2">
                     <NavItem icon={LayoutDashboard} label="Dashboard" active />
-                    <NavItem icon={TrendingUp} label="Watchlist" />
-                    <NavItem icon={BookOpen} label="CANSLIM Guide" />
-                    <NavItem icon={Settings} label="Settings" />
+                    <NavItem icon={TrendingUp} label="Watchlist" onClick={() => alert("Watchlist feature coming soon!")} />
+                    <NavItem icon={BookOpen} label="CANSLIM Guide" onClick={() => alert("CANSLIM Guide feature coming soon!")} />
+                    <NavItem icon={Settings} label="Settings" onClick={() => alert("Settings feature coming soon!")} />
                 </nav>
 
                 <div className="p-4 border-t border-border">

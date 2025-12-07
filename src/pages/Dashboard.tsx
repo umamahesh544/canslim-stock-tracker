@@ -19,7 +19,7 @@ export const Dashboard = () => {
                             <div className="bg-card border border-border rounded-xl p-6">
                                 <h4 className="font-semibold mb-2 text-blue-400">Pattern Alert</h4>
                                 <p className="text-sm text-muted-foreground mb-4">
-                                    "Cup and Handle" forming on NVDA. Breakout point at $155.00.
+                                    "Cup and Handle" forming on RELIANCE. Breakout point at ₹2,350.
                                 </p>
                                 <div className="h-2 bg-muted rounded-full overflow-hidden">
                                     <div className="h-full bg-blue-500 w-[85%]" />

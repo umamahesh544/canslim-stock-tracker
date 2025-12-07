@@ -1,14 +1,16 @@
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const data = [
-    { date: 'Mon', price: 150 },
-    { date: 'Tue', price: 142 },
-    { date: 'Wed', price: 135 }, // Bottom of cup
-    { date: 'Thu', price: 138 },
-    { date: 'Fri', price: 145 },
-    { date: 'Sat', price: 152 }, // Rim
-    { date: 'Sun', price: 148 }, // Handle
-    { date: 'Mon', price: 155 }, // Breakout
+    { date: '1 Dec', price: 2350 },
+    { date: '2 Dec', price: 2320 },
+    { date: '3 Dec', price: 2280 }, // Cup start
+    { date: '4 Dec', price: 2250 },
+    { date: '5 Dec', price: 2220 }, // Bottom
+    { date: '6 Dec', price: 2250 },
+    { date: '7 Dec', price: 2290 },
+    { date: '8 Dec', price: 2340 }, // Rim
+    { date: '9 Dec', price: 2310 }, // Handle
+    { date: '10 Dec', price: 2360 }, // Breakout
 ];
 
 export const StockChart = () => {
@@ -16,13 +18,13 @@ export const StockChart = () => {
         <div className="bg-card border border-border rounded-xl p-6 h-[400px]">
             <div className="flex items-center justify-between mb-6">
                 <div>
-                    <h3 className="text-lg font-semibold">NVDA - Nvidia Corp.</h3>
+                    <h3 className="text-lg font-semibold">RELIANCE - Reliance Industries</h3>
                     <p className="text-sm text-muted-foreground">Daily Chart • Cup and Handle Detected</p>
                 </div>
                 <div className="text-right">
-                    <div className="text-2xl font-bold font-mono">$155.00</div>
+                    <div className="text-2xl font-bold font-mono">₹2,360.00</div>
                     <div className="text-sm text-green-400 flex items-center justify-end gap-1">
-                        +4.2% <TrendingDownIcon className="w-3 h-3 rotate-180" />
+                        +1.5% <TrendingDownIcon className="w-3 h-3 rotate-180" />
                     </div>
                 </div>
             </div>
