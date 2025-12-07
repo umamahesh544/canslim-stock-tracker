@@ -1,0 +1,22 @@
+export const TOP_20_SNAPSHOT = [
+    { name: "Hindustan Aeronautics Ltd", symbol: "HAL", price: 4443.00, change: -1.20, marketCap: "297,247 Cr", pe: 35.10, epsGrowth: "15%", rating: "Buy" },
+    { name: "Bharat Electronics Ltd", symbol: "BEL", price: 406.90, change: -0.06, marketCap: "297,435 Cr", pe: 54.30, epsGrowth: "31%", rating: "Strong Buy" },
+    { name: "Trent Ltd", symbol: "TRENT", price: 4183.10, change: 1.5, marketCap: "148,926 Cr", pe: 92.73, epsGrowth: "10%", rating: "Hold" },
+    { name: "Coal India Ltd", symbol: "COALINDIA", price: 379.95, change: 1.01, marketCap: "234,153 Cr", pe: 7.50, epsGrowth: "8%", rating: "Buy" },
+    { name: "Mazagon Dock Shipbuilders", symbol: "MAZDOCK", price: 2616.30, change: -0.94, marketCap: "105,536 Cr", pe: 47.32, epsGrowth: "26%", rating: "Buy" },
+    { name: "Cochin Shipyard", symbol: "COCHINSHIP", price: 1540.20, change: 2.1, marketCap: "40,500 Cr", pe: 42.1, epsGrowth: "45%", rating: "Strong Buy" },
+    { name: "Fact Ltd", symbol: "FACT", price: 890.50, change: 3.2, marketCap: "57,000 Cr", pe: 38.5, epsGrowth: "12%", rating: "Hold" },
+    { name: "IRFC", symbol: "IRFC", price: 175.40, change: 0.5, marketCap: "229,000 Cr", pe: 34.2, epsGrowth: "18%", rating: "Buy" },
+    { name: "RVNL", symbol: "RVNL", price: 480.10, change: 1.1, marketCap: "100,000 Cr", pe: 45.6, epsGrowth: "22%", rating: "Buy" },
+    { name: "Tata Power", symbol: "TATAPOWER", price: 435.60, change: 0.8, marketCap: "139,000 Cr", pe: 39.8, epsGrowth: "14%", rating: "Hold" },
+    { name: "Adani Ports", symbol: "ADANIPORTS", price: 1450.75, change: -0.5, marketCap: "313,000 Cr", pe: 32.4, epsGrowth: "20%", rating: "Buy" },
+    { name: "REC Ltd", symbol: "RECLTD", price: 560.30, change: 1.2, marketCap: "147,000 Cr", pe: 9.8, epsGrowth: "25%", rating: "Strong Buy" },
+    { name: "PFC", symbol: "PFC", price: 490.80, change: 1.5, marketCap: "162,000 Cr", pe: 8.9, epsGrowth: "24%", rating: "Strong Buy" },
+    { name: "InterGlobe Aviation (Indigo)", symbol: "INDIGO", price: 4600.20, change: -1.0, marketCap: "177,000 Cr", pe: 22.5, epsGrowth: "110%", rating: "Buy" },
+    { name: "Zomato", symbol: "ZOMATO", price: 260.50, change: 2.5, marketCap: "224,000 Cr", pe: 110.5, epsGrowth: "Turnaround", rating: "Buy" },
+    { name: "DLF", symbol: "DLF", price: 920.40, change: 0.3, marketCap: "227,000 Cr", pe: 65.4, epsGrowth: "15%", rating: "Hold" },
+    { name: "Prestige Estates", symbol: "PRESTIGE", price: 1850.50, change: 1.8, marketCap: "74,000 Cr", pe: 55.2, epsGrowth: "12%", rating: "Buy" },
+    { name: "Tata Communications", symbol: "TATACOMM", price: 1950.60, change: -0.2, marketCap: "55,000 Cr", pe: 48.9, epsGrowth: "8%", rating: "Hold" },
+    { name: "Macrotech Developers (Lodha)", symbol: "LODHA", price: 1340.50, change: 0.9, marketCap: "133,000 Cr", pe: 60.1, epsGrowth: "18%", rating: "Buy" },
+    { name: "BSE Ltd", symbol: "BSE", price: 2815.90, change: 4.5, marketCap: "38,000 Cr", pe: 45.2, epsGrowth: "30%", rating: "Strong Buy" }
+];
