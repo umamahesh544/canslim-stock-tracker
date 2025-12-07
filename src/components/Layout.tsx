@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, TrendingUp, BookOpen, Bell, Search, Menu } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, BookOpen, Bell, Search, Menu, Activity, Calendar, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -48,25 +48,31 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                         onClick={() => navigate('/')}
                     />
                     <NavItem
-                        icon={TrendingUp}
-                        label="Today's CANSLIM"
+                        icon={Sparkles}
+                        label="Today's CANSLIM (Live)"
                         active={location.pathname === '/todays-canslim'}
                         onClick={() => navigate('/todays-canslim')}
                     />
                     <NavItem
-                        icon={BookOpen}
+                        icon={Activity}
+                        label="Top 20 Snapshot (Static)"
+                        active={location.pathname === '/top-20-snapshot'}
+                        onClick={() => navigate('/top-20-snapshot')}
+                    />
+                    <NavItem
+                        icon={Calendar}
                         label="Past Week Data"
                         active={location.pathname === '/past-week-canslim'}
                         onClick={() => navigate('/past-week-canslim')}
                     />
                     <NavItem
-                        icon={Search}
+                        icon={TrendingUp}
                         label="Today's Top Gainers"
                         active={location.pathname === '/top-gainers'}
                         onClick={() => navigate('/top-gainers')}
                     />
                     <NavItem
-                        icon={Bell}
+                        icon={BookOpen}
                         label="Watchlist"
                         active={location.pathname === '/watchlist'}
                         onClick={() => navigate('/watchlist')}
