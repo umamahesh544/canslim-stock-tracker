@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, TrendingUp, BookOpen, Settings, Bell, Search, Menu } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, BookOpen, Bell, Search, Menu } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useNavigate, useLocation } from 'react-router-dom';
 
