@@ -70,14 +70,17 @@ export const Portfolio = () => {
                             </h3>
                             <form onSubmit={handleAddStock} className="flex gap-3 items-end">
                                 <div className="flex-1 space-y-1">
-                                    <label className="text-xs text-muted-foreground font-medium">Symbol (e.g., TATASTEEL)</label>
+                                    <label className="text-xs text-muted-foreground font-medium">Symbol (Ticker)</label>
                                     <input
                                         type="text"
                                         value={symbolInput}
                                         onChange={(e) => setSymbolInput(e.target.value)}
-                                        placeholder="NSE Symbol"
+                                        placeholder="e.g. RELIANCE, TCS"
                                         className="w-full bg-muted/50 border border-border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 uppercase"
                                     />
+                                    <p className="text-[10px] text-muted-foreground">
+                                        Use NSE symbols. <a href="https://www.google.com/finance" target="_blank" rel="noreferrer" className="text-blue-400 hover:underline">Find symbol</a>
+                                    </p>
                                 </div>
                                 <div className="flex-1 space-y-1">
                                     <label className="text-xs text-muted-foreground font-medium">Buy Price (₹)</label>
