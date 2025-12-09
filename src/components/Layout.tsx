@@ -1,4 +1,4 @@
-import { LayoutDashboard, TrendingUp, BookOpen, Bell, Search, Menu, Activity, Calendar, Sparkles, IndianRupee, Radar } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, BookOpen, Bell, Search, Menu, Activity, Calendar, Sparkles, IndianRupee } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useNavigate, useLocation } from 'react-router-dom';
 

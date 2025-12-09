@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Layout } from '../components/Layout';
 import { TOP_20_SNAPSHOT } from '../data/snapshotData';
+import { cn } from '../lib/utils';
 import { TrendingUp, Coffee, Triangle } from 'lucide-react';
 
 export const Patterns = () => {
