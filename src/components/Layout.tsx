@@ -1,5 +1,4 @@
-import React from 'react';
-import { LayoutDashboard, TrendingUp, BookOpen, Bell, Search, Menu, Activity, Calendar, Sparkles, IndianRupee } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, BookOpen, Bell, Search, Menu, Activity, Calendar, Sparkles, IndianRupee, Radar } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -61,6 +60,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                     />
                     <NavItem
                         icon={Sparkles}
+                        label="Pattern Radar"
+                        active={location.pathname === '/patterns'}
+                        onClick={() => navigate('/patterns')}
+                    />
+                    <NavItem
+                        icon={Activity}
                         label="Today's CANSLIM (Live)"
                         active={location.pathname === '/todays-canslim'}
                         onClick={() => navigate('/todays-canslim')}

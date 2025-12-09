@@ -6,6 +6,8 @@ import { TopGainers } from './pages/TopGainers';
 import { Top20Snapshot } from './pages/Top20Snapshot';
 import { PastWeekCustom } from './pages/PastWeekCustom';
 import { DynamicCanslim } from './pages/DynamicCanslim';
+import { Portfolio } from './pages/Portfolio';
+import { Patterns } from './pages/Patterns';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/watchlist" element={<Watchlist />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/patterns" element={<Patterns />} />
         <Route path="/todays-canslim" element={<DynamicCanslim />} />
         <Route path="/top-20-snapshot" element={<Top20Snapshot />} />
         <Route path="/past-week-canslim" element={<PastWeekCustom />} />
